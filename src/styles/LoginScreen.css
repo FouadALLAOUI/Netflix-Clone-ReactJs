@@ -1,0 +1,58 @@
+.loginScreen{
+    position: relative;
+    height: 100%;
+    background: url("https://images.frandroid.com/wp-content/uploads/2022/10/netflix-octobre-contenus-2022.jpg") 
+    center no-repeat;
+    background-size: cover;
+
+}
+
+.loginScreen_body{
+    position: absolute;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    color: #fff;
+    padding: 20px;
+}
+
+.loginScreen_body > h1{
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+    
+}
+
+.loginScreen_gradient {
+   width: 100%;
+   z-index: 1;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.4);
+   background-image: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8) 0,
+    rgba(0,0,0,0) 60%,
+    rgba(0,0,0,0.8) 100%
+   );
+
+}
+
+.loginScreen_button{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e50914;
+    border-radius: 20px;
+}
+
+
+.loginScreen_logo{
+    position: fixed;
+    left: 0;
+    width: 150px;
+    object-fit: contain;
+    padding-left: 20px;
+}
