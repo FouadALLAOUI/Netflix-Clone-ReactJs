@@ -1,5 +1,5 @@
 
-const API_KEY = "2ee1841ca761edd54f308f08b834c7be";
+const API_KEY = "2ee1841ca761edd54f308f08b834c7be"; // To Hide
 
 const requests= {
     fetchTrading: `/trending/all/week?api_key=${API_KEY}&language=en-US`,

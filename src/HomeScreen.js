@@ -10,7 +10,7 @@ function HomeScreen() {
       <Nav />
       {/*Banner*/}
       <Banner />
-
+            
 
     </div>
   )
