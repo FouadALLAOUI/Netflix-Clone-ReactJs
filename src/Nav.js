@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './styles/Nav.css'
 function Nav() {
-
+    // React useState Hook allows us to track state in a function component.
     const [show, handleShow] = useState(false);
     const transitionNavBar = () => {
         if (window.scrollY > 100) {
@@ -10,7 +10,7 @@ function Nav() {
             handleShow(false);
         }
     }
-
+    //useEffect Hook allows you to perform side effects in your components
     useEffect(()=>{
         window.addEventListener("scroll", transitionNavBar);
         return () => window.removeEventListener('scroll', transitionNavBar);
@@ -18,6 +18,7 @@ function Nav() {
 
   return (
     <div className={`nav ${show && 'nav_black'}`}>
+    
     <div className='nav_content'>
         <img
             className='nav_logo'
