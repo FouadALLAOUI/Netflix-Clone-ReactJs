@@ -8,11 +8,12 @@ import {
 } from "react-router-dom";
 import LoginScreen from './screens/LoginScreen';
 import { auth } from './firebase';
-import { useDispatch } from 'react-redux';
-import { login, logout } from './features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout, selectUser } from './features/userSlice';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
-  const user = null;
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
     
   useEffect(() =>{
@@ -25,7 +26,7 @@ function App() {
         }))
       }else{
         //Logged out
-        dispatch(logout)
+        dispatch(logout())
       }
     });
 
@@ -42,6 +43,9 @@ function App() {
           <LoginScreen />
         ) : (
           <Switch>
+            <Route path="/profile">
+              <ProfileScreen/>
+            </Route>
             <Route exact path="/">
               <HomeScreen />
             </Route>
