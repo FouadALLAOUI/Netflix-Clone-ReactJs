@@ -13,6 +13,6 @@ FROM nginx:stable-alpine
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 # Copy the built React app to Nginx's web server directory
-COPY --from=build /app/build .
+COPY --from=builder /app/build .
 EXPOSE 80
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
